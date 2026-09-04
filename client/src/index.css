@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F7F8F5;
+    color: #1F2933;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Light SaaS Card styling */
+.card-clean {
+  background-color: #FFFFFF;
+  border: 1px solid #E1E7E3;
+  box-shadow: 0 2px 12px -2px rgba(31, 41, 51, 0.04), 0 1px 4px -1px rgba(31, 41, 51, 0.02);
+  border-radius: 16px;
+}
+
+.card-interactive {
+  background-color: #FFFFFF;
+  border: 1px solid #E1E7E3;
+  box-shadow: 0 2px 12px -2px rgba(31, 41, 51, 0.04), 0 1px 4px -1px rgba(31, 41, 51, 0.02);
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-interactive:hover {
+  border-color: #16866A;
+  box-shadow: 0 8px 24px -4px rgba(22, 134, 106, 0.12), 0 2px 8px -2px rgba(31, 41, 51, 0.04);
+  transform: translateY(-2px);
+}
+
+.card-sage {
+  background-color: #ECF8F4;
+  border: 1px solid #DCEFE8;
+  border-radius: 16px;
+}
+
+/* Marker pulse effect */
+.bus-live-pulse {
+  position: relative;
+}
+.bus-live-pulse::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(34, 160, 107, 0.35);
+  transform: translate(-50%, -50%);
+  animation: busPulseRing 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes busPulseRing {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+  100% {
+    width: 220%;
+    height: 220%;
+    opacity: 0;
+  }
+}
+
+/* Light Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCEFE8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16866A;
+}
